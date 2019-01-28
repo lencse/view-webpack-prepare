@@ -1,0 +1,10 @@
+{
+  "name": "view-webpack-prepare",
+  "version": "1.0.0",
+  "description": "Build EJS views for webpack",
+  "main": "index.js",
+  "repository": "git@github.com:lencse/view-webpack-prepare.git",
+  "author": "Levente Löki <leventeloki@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
