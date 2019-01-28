@@ -4,7 +4,7 @@ module.exports = {
     testMatch: [
         '**/test/**/*Test.ts?(x)'
     ],
-    // coverageDirectory: 'logs/jest',
-    // collectCoverage: true,
+    coverageDirectory: 'logs/jest',
+    collectCoverage: true,
     // testResultsProcessor: 'jest-sonar-reporter'
 }
