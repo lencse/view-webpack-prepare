@@ -9,6 +9,9 @@
   "private": false,
   "scripts": {
     "tcr": "yarn test && git add . && git commit -m 'work' || git reset --hard HEAD",
+    "clean-build": "rm -rf build",
+    "build-typescript": "tsc -p . --outDir ./build",
+    "build": "yarn clean-build && yarn build-typescript",
     "lint": "tslint -c tslint.json -p .",
     "test": "jest",
     "test-all": "yarn lint && yarn test"
