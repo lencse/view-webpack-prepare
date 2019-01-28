@@ -8,6 +8,6 @@ describe('Walking source dir', () => {
         const dirname = join(tmpdir(), String(Date.now()))
         mkdirSync(dirname)
         const walker = new Walker()
-        expect(await walker.getFiles()).toEqual([])
+        expect(await walker.getFiles(dirname)).toEqual([])
     })
 })
