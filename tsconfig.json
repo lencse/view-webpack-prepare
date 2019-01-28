@@ -6,7 +6,8 @@
         "moduleResolution": "node",
         "preserveConstEnums": true,
         "sourceMap": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "noUnusedLocals": true
     },
     "exclude": [
         "build",
