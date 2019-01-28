@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "tcr": "yarn test && git commit -am 'work' || git reset --hard HEAD",
-    "test": "exit 0"
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",
