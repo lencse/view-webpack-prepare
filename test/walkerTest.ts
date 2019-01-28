@@ -6,5 +6,7 @@ describe('Walking source dir', () => {
     it('Walk empty dir', () => {
         const dirname = join(tmpdir(), String(Date.now()))
         mkdirSync(dirname)
+        return
+        const walker = {}
     })
 })
