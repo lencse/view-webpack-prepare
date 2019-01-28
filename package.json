@@ -10,5 +10,8 @@
   "scripts": {
     "tcr": "yarn test && git commit -am 'work' || git reset --hard HEAD",
     "test": "exit 0"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.4"
   }
 }
