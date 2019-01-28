@@ -13,6 +13,7 @@
     "build-typescript": "tsc -p . --outDir ./build",
     "build": "yarn clean-build && yarn build-typescript",
     "lint": "tslint -c tslint.json -p .",
+    "test-build": "yarn build && jest --config jest.config.build.js",
     "test": "jest",
     "test-all": "yarn lint && yarn test"
   },
