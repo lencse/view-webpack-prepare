@@ -8,13 +8,16 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "tcr": "yarn test && git commit -am 'work' || git reset --hard HEAD",
-    "test": "jest"
+    "tcr": "yarn test && git add . && git commit -m 'work' || git reset --hard HEAD",
+    "lint": "tslint -c tslint.json -p .",
+    "test": "jest",
+    "test-all": "yrn lint && yarn test"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "jest": "23",
     "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
     "typescript": "^3.2.4"
   }
 }
