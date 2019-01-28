@@ -1,6 +1,6 @@
 import { tmpdir } from 'os'
 import { join } from 'path'
-import { sync as mkdirSync} from 'mkdirp'
+import { sync as mkdirSync } from 'mkdirp'
 
 describe('Walking source dir', () => {
     it('Walk empty dir', () => {
