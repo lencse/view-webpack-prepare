@@ -11,7 +11,7 @@
     "tcr": "yarn test && git add . && git commit -m 'work' || git reset --hard HEAD",
     "lint": "tslint -c tslint.json -p .",
     "test": "jest",
-    "test-all": "yrn lint && yarn test"
+    "test-all": "yarn lint && yarn test"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",
