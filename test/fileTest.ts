@@ -3,6 +3,8 @@ import { join } from 'path'
 import File from '../src/files/File'
 import content from '../src/files/content'
 import write from '../src/files/write'
+import FileBurner from '../src/files/FileBurner'
+import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
 
 describe('Files', () => {
 
@@ -31,6 +33,13 @@ describe('Files', () => {
     it('Write file', () => {
         const file = new File(tmpdir(), String(Date.now()))
         write(file, 'TEST')
+        expect(content(file)).toEqual('TEST')
+    })
+
+    it('Burn file', () => {
+        const file = new File(join(tmpdir(), String(Date.now())), 'test.txt')
+        const burner = new FileBurner(new MkdirpDirCreator())
+        burner.burn(file, 'TEST')
         expect(content(file)).toEqual('TEST')
     })
 
