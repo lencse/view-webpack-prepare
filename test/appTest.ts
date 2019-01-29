@@ -10,7 +10,12 @@ import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
 describe('App', () => {
 
     it('Run app', () => {
-        const app = new App(new NpmWalkWalker(), new FileBurner(new MkdirpDirCreator()))
+        const app = new App(
+            new NpmWalkWalker(),
+            new FileBurner(
+                new MkdirpDirCreator()
+            )
+        )
         const targetDir = join(tmpdir(), String(Date.now()))
         const compilers = new Compilers()
         const setup = new Setup(
