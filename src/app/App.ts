@@ -8,6 +8,7 @@ export default class App {
     ) {}
 
     public run(setup: Setup) {
+        this.walker.getFiles(setup.sourceDir)
     }
 
 }
