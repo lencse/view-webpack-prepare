@@ -29,7 +29,7 @@ describe('Walking source dir', () => {
     })
 
     it('Walk dir with subdirs', async () => {
-        const dirname = join(process.cwd(), 'test', 'fixtures', 'one-html-file')
+        const dirname = join(process.cwd(), 'test', 'fixtures', 'templates-in-subdirs')
         const walker = new Walker()
         const files = walker.getFiles(dirname)
         console.log(files)
