@@ -12,10 +12,9 @@ export default class Compilers {
     }
 
     public get(extension: string): (content: string, options: any) => string {
-        if (this.compilers.has(extension)) {
-            return this.compilers.get(extension)
-        }
-        return (content: string, options: any) => content
+        return this.compilers.has(extension) ?
+            this.compilers.get(extension) :
+            (content: string, options: any) => content
     }
 
 }
