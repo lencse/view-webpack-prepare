@@ -1,3 +1,4 @@
+import { join } from 'path'
 import File from '../src/files/File'
 
 describe('Files', () => {
@@ -17,6 +18,11 @@ describe('Files', () => {
     it('Transform extension', () => {
         const file = new File('/', 'file.txt')
         expect(file.transformExtension('html')).toEqual(new File('/', 'file.html'))
+    })
+
+    it('File content', () => {
+        const file = new File(join(process.cwd(), 'test', 'fixtures', 'one-html-file'), 'index.html')
+        expect(file.name).toEqual('index.html')
     })
 
 })
