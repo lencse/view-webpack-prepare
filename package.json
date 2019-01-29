@@ -1,7 +1,7 @@
 {
-  "name": "view-webpack-prepare",
+  "name": "template-cooker",
   "version": "1.0.0",
-  "description": "Build EJS views for webpack",
+  "description": "Compiling templates on the run",
   "main": "main.js",
   "repository": "git@github.com:lencse/view-webpack-prepare.git",
   "author": "Levente Löki <leventeloki@gmail.com>",
