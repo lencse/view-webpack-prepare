@@ -17,6 +17,7 @@ describe('App', () => {
             )
         )
         const targetDir = join(tmpdir(), String(Date.now()))
+        console.log(targetDir)
         const compilers = new Compilers()
         const setup = new Setup(
             join(process.cwd(), 'test/fixtures/html-and-txt'),
