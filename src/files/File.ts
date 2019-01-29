@@ -23,7 +23,7 @@ export default class File {
     }
 
     public transformPath(src: string, target: string): File {
-        return new File(relative(src, this.path), this.name)
+        return new File(join(target, relative(src, this.path)), this.name)
     }
 
 }
