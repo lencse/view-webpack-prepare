@@ -1,6 +1,8 @@
+import { tmpdir } from 'os'
 import { join } from 'path'
 import File from '../src/files/File'
 import content from '../src/files/content'
+import write from '../src/files/write'
 
 describe('Files', () => {
 
@@ -24,6 +26,12 @@ describe('Files', () => {
     it('File content', () => {
         const file = new File(join(process.cwd(), 'test', 'fixtures', 'one-html-file'), 'index.html')
         expect(content(file)).toEqual('<html></html>')
+    })
+
+    it('Write file', () => {
+        const file = new File(tmpdir(), String(Date.now()))
+        write(file, 'TEST')
+        expect(content(file)).toEqual('TEST')
     })
 
 })
