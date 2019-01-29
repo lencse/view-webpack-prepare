@@ -31,7 +31,7 @@ export default class File {
     }
 
     public transformExtension(extension: string): File {
-        return new File(this.path, this.name)
+        return new File(this.path, this.name.replace(/\.[^.]*/, `.${extension}`))
     }
 
 }
