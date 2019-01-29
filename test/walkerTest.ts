@@ -19,4 +19,13 @@ describe('Walking source dir', () => {
             join(dirname, '.gitkeep')
         ])
     })
+
+    it('Walk dir with one htl file', async () => {
+        const dirname = join(process.cwd(), 'test', 'fixtures', 'one-html-file')
+        const walker = new Walker()
+        expect(walker.getFiles(dirname)).toEqual([
+            join(dirname, 'index.html')
+        ])
+    })
+
 })
