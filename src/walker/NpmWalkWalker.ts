@@ -1,7 +1,8 @@
 import { walkSync } from 'walk'
 import { join } from 'path'
+import Walker from './Walker'
 
-export default class NpmWalkWalker {
+export default class NpmWalkWalker implements Walker {
 
     public getFiles(dir: string): string[] {
         const result = []
