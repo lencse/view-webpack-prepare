@@ -29,6 +29,7 @@ describe('App', () => {
         )
         app.run(setup)
         expect(content(new File(targetDir, 'index.ejs'))).toEqual('<html></html>')
+        expect(content(new File(join(targetDir, 'subdir'), 'test.ejs'))).toEqual('test')
     })
 
 })
