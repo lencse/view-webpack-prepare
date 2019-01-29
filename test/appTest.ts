@@ -17,8 +17,8 @@ describe('App', () => {
             )
         )
         const targetDir = join(tmpdir(), String(Date.now()))
-        console.log(targetDir)
         const compilers = new Compilers()
+        compilers.add('txt', (content: string) => content.toLowerCase())
         const setup = new Setup(
             join(process.cwd(), 'test/fixtures/html-and-txt'),
             targetDir,
