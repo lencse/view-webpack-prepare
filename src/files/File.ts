@@ -26,4 +26,8 @@ export default class File {
         return new File(join(target, relative(src, this.path)), this.name)
     }
 
+    public get extension(): string {
+        return this.name.match(/\.([^.]*)/).pop()
+    }
+
 }

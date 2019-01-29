@@ -9,4 +9,9 @@ describe('Files', () => {
         )
     })
 
+    it('Extension', () => {
+        const file = new File('/', 'file.txt')
+        expect(file.extension).toEqual('txt')
+    })
+
 })
