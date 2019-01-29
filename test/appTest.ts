@@ -6,6 +6,8 @@ import Setup from '../src/app/Setup'
 import Compilers from '../src/compiler/Compilers'
 import FileBurner from '../src/files/FileBurner'
 import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
+import content from '../src/files/content'
+import File from '../src/files/File'
 
 describe('App', () => {
 
@@ -18,7 +20,7 @@ describe('App', () => {
         )
         const targetDir = join(tmpdir(), String(Date.now()))
         const compilers = new Compilers()
-        compilers.add('txt', (content: string) => content.toLowerCase())
+        compilers.add('txt', (fileContent: string) => fileContent.toLowerCase())
         const setup = new Setup(
             join(process.cwd(), 'test/fixtures/html-and-txt'),
             targetDir,
@@ -26,6 +28,7 @@ describe('App', () => {
             compilers
         )
         app.run(setup)
+        expect(content(new File(targetDir, 'index.ejs'))).toEqual('<html></html>')
     })
 
 })
