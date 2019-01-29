@@ -22,4 +22,8 @@ export default class File {
         return join(this.path, this.name)
     }
 
+    public transformPath(src: string, target: string): File {
+        return new File(this.path, this.name)
+    }
+
 }
