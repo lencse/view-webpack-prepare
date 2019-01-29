@@ -33,7 +33,10 @@ describe('Walking source dir', () => {
         const walker = new Walker()
         const files = walker.getFiles(dirname)
         expect(files.length).toBe(3)
-        console.log(files)
+        const arr = ['index.html', 'subdir1/tpl.html', 'subdir2/tpl.html']
+        arr.forEach((expected) => {
+            expect(files.filter((file) => file === join(dirname, expected)).length).toBe(1)
+        })
         // expect(walker.getFiles(dirname)).toEqual([
         //     join(dirname, 'index.html')
         // ])
