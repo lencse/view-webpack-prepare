@@ -12,7 +12,7 @@ import File from '../src/files/File'
 describe('Dirn burner', () => {
 
     it('Burn dir', () => {
-        const app = new DirBurner(
+        const burner = new DirBurner(
             new NpmWalkWalker(),
             new FileBurner(
                 new MkdirpDirCreator()
@@ -27,7 +27,7 @@ describe('Dirn burner', () => {
             'ejs',
             compilers
         )
-        app.run(setup, {})
+        burner.run(setup, {})
         expect(content(new File(targetDir, 'index.ejs'))).toEqual('<html></html>')
         expect(content(new File(join(targetDir, 'subdir'), 'test.ejs'))).toEqual('test')
     })
