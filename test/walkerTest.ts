@@ -13,7 +13,7 @@ describe('Walking source dir', () => {
     })
 
     it('Walk dir with one nonrelevant file', async () => {
-        const dirname = join(__dirname, 'fixtures', 'one-nonrelevant-file')
+        const dirname = join(process.cwd(), 'test', 'fixtures', 'one-nonrelevant-file')
         const walker = new Walker()
         expect(await walker.getFiles(dirname)).toEqual([
             join(dirname, '.gitkeep')
