@@ -6,7 +6,7 @@ export default class Walker {
         console.log(dir)
         walkSync(dir, {
             listeners: {
-                names: (base, names, next) => {
+                files: (base, names, next) => {
                     console.log(base, names)
                     // return next()
                 }
