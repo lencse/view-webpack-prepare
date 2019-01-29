@@ -20,7 +20,7 @@ describe('Walking source dir', () => {
         ])
     })
 
-    it('Walk dir with one htl file', async () => {
+    it('Walk dir with one html file', async () => {
         const dirname = join(process.cwd(), 'test', 'fixtures', 'one-html-file')
         const walker = new Walker()
         expect(walker.getFiles(dirname)).toEqual([
