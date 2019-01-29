@@ -11,7 +11,7 @@ import File from '../src/files/File'
 
 describe('App', () => {
 
-    it('Run app', () => {
+    it('Burn dir', () => {
         const app = new DirBurner(
             new NpmWalkWalker(),
             new FileBurner(
