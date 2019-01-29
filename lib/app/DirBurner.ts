@@ -10,7 +10,7 @@ export default class DirBurner {
         private burner: FileBurner
     ) {}
 
-    public run(setup: Setup, params: any) {
+    public run(setup: Setup, params: any): void {
         const { sourceDir, targetDir, targetExtension, compilers } = setup
         this.walker.getFiles(sourceDir).forEach((file) => {
             this.burner.burn(
