@@ -32,7 +32,7 @@ describe('Walking source dir', () => {
         const dirname = join(process.cwd(), 'test', 'fixtures', 'templates-in-subdirs')
         const walker = new Walker()
         const files = walker.getFiles(dirname)
-        console.log(files.length)
+        console.log(files,files.length, files[0])
         // expect(files.length).toBe(3)
         // expect(walker.getFiles(dirname)).toEqual([
         //     join(dirname, 'index.html')
