@@ -1,10 +1,10 @@
 import { tmpdir } from 'os'
 import { join } from 'path'
-import File from '../src/files/File'
-import content from '../src/files/content'
-import write from '../src/files/write'
-import FileBurner from '../src/files/FileBurner'
-import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
+import File from '../lib/files/File'
+import content from '../lib/files/content'
+import write from '../lib/files/write'
+import FileBurner from '../lib/files/FileBurner'
+import MkdirpDirCreator from '../lib/dirs/MkdirpDirCreator'
 
 describe('Files', () => {
 

@@ -1,8 +1,8 @@
 import { tmpdir } from 'os'
 import { join } from 'path'
-import NpmWalkWalker from '../src/walker/NpmWalkWalker'
-import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
-import File from '../src/files/File'
+import NpmWalkWalker from '../lib/walker/NpmWalkWalker'
+import MkdirpDirCreator from '../lib/dirs/MkdirpDirCreator'
+import File from '../lib/files/File'
 
 describe('Walking source dir', () => {
 

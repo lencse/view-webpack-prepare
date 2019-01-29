@@ -1,4 +1,4 @@
-import Compilers from '../src/compiler/Compilers'
+import Compilers from '../lib/compiler/Compilers'
 
 describe('Compilers', () => {
 

@@ -1,13 +1,13 @@
 import { tmpdir } from 'os'
 import { join } from 'path'
-import DirBurner from '../src/app/DirBurner'
-import NpmWalkWalker from '../src/walker/NpmWalkWalker'
-import Setup from '../src/app/Setup'
-import Compilers from '../src/compiler/Compilers'
-import FileBurner from '../src/files/FileBurner'
-import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
-import content from '../src/files/content'
-import File from '../src/files/File'
+import DirBurner from '../lib/app/DirBurner'
+import NpmWalkWalker from '../lib/walker/NpmWalkWalker'
+import Setup from '../lib/app/Setup'
+import Compilers from '../lib/compiler/Compilers'
+import FileBurner from '../lib/files/FileBurner'
+import MkdirpDirCreator from '../lib/dirs/MkdirpDirCreator'
+import content from '../lib/files/content'
+import File from '../lib/files/File'
 
 describe('Dirn burner', () => {
 
