@@ -8,7 +8,7 @@ export default class Walker {
         walkSync(dir, {
             listeners: {
                 files: (base, names, next) => {
-                    names.forEach((file) => result.push(join(dir, file.name)))
+                    names.forEach((file) => result.push(join(base, file.name)))
                     next()
                 }
             }
