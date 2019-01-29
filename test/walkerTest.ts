@@ -2,6 +2,7 @@ import { tmpdir } from 'os'
 import { join } from 'path'
 import NpmWalkWalker from '../src/walker/NpmWalkWalker'
 import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
+import File from '../src/files/File'
 
 describe('Walking source dir', () => {
 
@@ -17,7 +18,7 @@ describe('Walking source dir', () => {
         const dirname = join(process.cwd(), 'test', 'fixtures', 'one-nonrelevant-file')
         const walker = new NpmWalkWalker()
         expect(walker.getFiles(dirname)).toEqual([
-            join(dirname, '.gitkeep')
+            new File(dirname, '.gitkeep')
         ])
     })
 
@@ -25,7 +26,7 @@ describe('Walking source dir', () => {
         const dirname = join(process.cwd(), 'test', 'fixtures', 'one-html-file')
         const walker = new NpmWalkWalker()
         expect(walker.getFiles(dirname)).toEqual([
-            join(dirname, 'index.html')
+            new File(dirname, 'index.html')
         ])
     })
 
@@ -38,7 +39,7 @@ describe('Walking source dir', () => {
         test.forEach((expected) => {
             expect(
                 files.filter(
-                    (file) => file === join(dirname, expected)
+                    (file) => file.fullPath === join(dirname, expected)
                 ).length
             ).toBe(1)
         })

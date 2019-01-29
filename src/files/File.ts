@@ -1,3 +1,5 @@
+import { join } from 'path'
+
 export default class File {
 
     private _name: string
@@ -14,6 +16,10 @@ export default class File {
     }
     public get name(): string {
         return this._name
+    }
+
+    public get fullPath(): string {
+        return join(this.path, this.name)
     }
 
 }
