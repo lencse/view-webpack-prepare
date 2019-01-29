@@ -1,4 +1,4 @@
-import { join } from 'path'
+import { join, relative } from 'path'
 
 export default class File {
 
@@ -23,7 +23,7 @@ export default class File {
     }
 
     public transformPath(src: string, target: string): File {
-        return new File(this.path, this.name)
+        return new File(relative(src, this.path), this.name)
     }
 
 }
