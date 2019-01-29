@@ -1,13 +1,14 @@
 import { tmpdir } from 'os'
 import { join } from 'path'
-import { sync as mkdirSync } from 'mkdirp'
 import NpmWalkWalker from '../src/walker/NpmWalkWalker'
+import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
 
 describe('Walking source dir', () => {
 
     it('Walk empty dir', () => {
         const dirname = join(tmpdir(), String(Date.now()))
-        mkdirSync(dirname)
+        const createDir = new MkdirpDirCreator()
+        createDir.create(dirname)
         const walker = new NpmWalkWalker()
         expect(walker.getFiles(dirname)).toEqual([])
     })
