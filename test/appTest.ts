@@ -1,6 +1,6 @@
 import { tmpdir } from 'os'
 import { join } from 'path'
-import DirBurner from '../src/app/App'
+import DirBurner from '../src/app/DirBurner'
 import NpmWalkWalker from '../src/walker/NpmWalkWalker'
 import Setup from '../src/app/Setup'
 import Compilers from '../src/compiler/Compilers'
