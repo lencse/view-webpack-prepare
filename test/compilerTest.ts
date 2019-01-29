@@ -5,7 +5,7 @@ describe('Compilers', () => {
     const compilers = new Compilers()
     compilers.add(
         'html',
-        (content: string, options: any) => [content.toLowerCase(), options.foo].join('-')
+        (content: string, params: any) => [content.toLowerCase(), params.foo].join('-')
     )
 
     it('Default', () => {

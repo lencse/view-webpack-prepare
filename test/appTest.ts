@@ -1,6 +1,6 @@
 import { tmpdir } from 'os'
 import { join } from 'path'
-import App from '../src/app/App'
+import DirBurner from '../src/app/App'
 import NpmWalkWalker from '../src/walker/NpmWalkWalker'
 import Setup from '../src/app/Setup'
 import Compilers from '../src/compiler/Compilers'
@@ -12,7 +12,7 @@ import File from '../src/files/File'
 describe('App', () => {
 
     it('Run app', () => {
-        const app = new App(
+        const app = new DirBurner(
             new NpmWalkWalker(),
             new FileBurner(
                 new MkdirpDirCreator()

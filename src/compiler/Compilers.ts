@@ -2,19 +2,19 @@ export default class Compilers {
 
     private compilers: Map<
         string,
-        (content: string, options: any) => string
+        (content: string, params: any) => string
     > = new Map<
-        string, (content: string, options: any) => string
+        string, (content: string, params: any) => string
     >()
 
-    public add(extension: string, compiler: (content: string, options: any) => string): void {
+    public add(extension: string, compiler: (content: string, params: any) => string): void {
         this.compilers.set(extension, compiler)
     }
 
-    public get(extension: string): (content: string, options: any) => string {
+    public get(extension: string): (content: string, params: any) => string {
         return this.compilers.has(extension) ?
             this.compilers.get(extension) :
-            (content: string, options: any) => content
+            (content: string, params: any) => content
     }
 
 }
