@@ -28,4 +28,15 @@ describe('Walking source dir', () => {
         ])
     })
 
+    it('Walk dir with subdirs', async () => {
+        const dirname = join(process.cwd(), 'test', 'fixtures', 'one-html-file')
+        const walker = new Walker()
+        const files = walker.getFiles(dirname)
+        console.log(files)
+        // expect(files.length).toBe(3)
+        // expect(walker.getFiles(dirname)).toEqual([
+        //     join(dirname, 'index.html')
+        // ])
+    })
+
 })
