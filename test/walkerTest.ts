@@ -16,7 +16,7 @@ describe('Walking source dir', () => {
         const dirname = join(__dirname, 'fixtures', 'one-nonrelevant-file')
         const walker = new Walker()
         expect(await walker.getFiles(dirname)).toEqual([
-            // join(dirname, '.gitkeep')
+            join(dirname, '.gitkeep')
         ])
     })
 })
