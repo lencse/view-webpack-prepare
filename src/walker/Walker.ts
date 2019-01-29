@@ -3,7 +3,7 @@ import { join } from 'path'
 
 export default class Walker {
 
-    public async getFiles(dir: string): Promise<string[]> {
+    public getFiles(dir: string): string[] {
         const result = []
         walkSync(dir, {
             listeners: {
