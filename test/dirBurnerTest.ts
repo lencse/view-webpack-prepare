@@ -9,7 +9,7 @@ import MkdirpDirCreator from '../src/dirs/MkdirpDirCreator'
 import content from '../src/files/content'
 import File from '../src/files/File'
 
-describe('App', () => {
+describe('Dirn burner', () => {
 
     it('Burn dir', () => {
         const app = new DirBurner(
