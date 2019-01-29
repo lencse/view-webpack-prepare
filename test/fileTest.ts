@@ -1,5 +1,6 @@
 import { join } from 'path'
 import File from '../src/files/File'
+import content from '../src/files/content'
 
 describe('Files', () => {
 
@@ -22,7 +23,7 @@ describe('Files', () => {
 
     it('File content', () => {
         const file = new File(join(process.cwd(), 'test', 'fixtures', 'one-html-file'), 'index.html')
-        expect(file.name).toEqual('index.html')
+        expect(content(file)).toEqual('<html></html>')
     })
 
 })
