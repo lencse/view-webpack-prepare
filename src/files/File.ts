@@ -22,12 +22,16 @@ export default class File {
         return join(this.path, this.name)
     }
 
+    public get extension(): string {
+        return this.name.match(/\.([^.]*)/).pop()
+    }
+
     public transformPath(src: string, target: string): File {
         return new File(join(target, relative(src, this.path)), this.name)
     }
 
-    public get extension(): string {
-        return this.name.match(/\.([^.]*)/).pop()
+    public transformExtension(extension: string): File {
+        return new File(this.path, this.name)
     }
 
 }

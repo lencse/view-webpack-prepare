@@ -14,4 +14,9 @@ describe('Files', () => {
         expect(file.extension).toEqual('txt')
     })
 
+    it('Transform extension', () => {
+        const file = new File('/', 'file.txt')
+        expect(file.transformExtension('html')).toEqual(new File('/', 'file.txt'))
+    })
+
 })
