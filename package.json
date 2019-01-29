@@ -9,13 +9,13 @@
   "private": false,
   "scripts": {
     "tcr": "yarn test && git add . && git commit -m 'work' || git reset --hard HEAD",
-    "clean-build": "rm -rf build",
-    "build-typescript": "tsc -p . --outDir ./build",
-    "build": "yarn clean-build && yarn build-typescript",
+    "clean-dist": "rm -rf dist",
+    "build-typescript": "tsc -p . --outDir ./dist",
+    "build": "yarn clean-dist && yarn build-typescript",
     "lint": "tslint -c tslint.json -p .",
-    "test-build": "yarn build && jest --config jest.config.build.js",
+    "test-dist": "yarn build && jest --config jest.config.dist.js",
     "test": "jest --verbose",
-    "test-all": "yarn lint && yarn test-build && yarn test"
+    "test-all": "yarn lint && yarn test-dist && yarn test"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",

@@ -9,7 +9,7 @@
         "noUnusedLocals": true
     },
     "exclude": [
-        "build",
+        "dist",
         "node_modules"
     ]
 }
