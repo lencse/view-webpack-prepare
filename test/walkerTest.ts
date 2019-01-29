@@ -37,9 +37,6 @@ describe('Walking source dir', () => {
         arr.forEach((expected) => {
             expect(files.filter((file) => file === join(dirname, expected)).length).toBe(1)
         })
-        // expect(walker.getFiles(dirname)).toEqual([
-        //     join(dirname, 'index.html')
-        // ])
     })
 
 })
