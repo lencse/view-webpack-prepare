@@ -1,6 +1,6 @@
 import DirCreator from '../dirs/DirCreator'
-import File from './File'
-import write from './write'
+import File from '../files/File'
+import write from '../files/write'
 
 export default class FileBurner {
 

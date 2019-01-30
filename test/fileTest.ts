@@ -3,7 +3,7 @@ import { join } from 'path'
 import File from '../lib/files/File'
 import content from '../lib/files/content'
 import write from '../lib/files/write'
-import FileBurner from '../lib/files/FileBurner'
+import FileBurner from '../lib/burn/FileBurner'
 import MkdirpDirCreator from '../lib/dirs/MkdirpDirCreator'
 
 describe('Files', () => {
