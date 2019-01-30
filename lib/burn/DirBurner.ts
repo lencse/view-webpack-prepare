@@ -1,6 +1,6 @@
 import Walker from '../walker/Walker'
-import Setup from './Setup'
-import FileBurner from '../burn/FileBurner'
+import Setup from '../setup/Setup'
+import FileBurner from './FileBurner'
 import content from '../files/content'
 
 export default class DirBurner {
